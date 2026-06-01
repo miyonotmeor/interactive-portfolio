@@ -1,242 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIYO | Interactive Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+<title>@miyonotmeor | Portfolio</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f7;
-            color: #1d1d1f;
-            line-height: 1.6;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        nav {
-            position: sticky;
-            top: 0;
-            background-color: #f5f5f7;
-            padding: 15px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-            z-index: 1000;
-        }
+<style>
 
-        nav a {
-            text-decoration: none;
-            color: #800020;
-            margin: 0 15px;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        nav a:hover {
-            opacity: 0.8;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        section {
-            padding: 60px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(to bottom,#b00000,#600000);
+    color:white;
+}
 
-        .hero {
-            text-align: center;
-        }
+/* Navigation */
 
-        .profile-image {
-            width: 220px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #800020;
-        }
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(0,0,0,0.15);
+    backdrop-filter:blur(10px);
+    padding:15px;
+    text-align:center;
+}
 
-        h1 {
-            font-size: 4rem;
-            margin-top: 25px;
-            margin-bottom: 10px;
-        }
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:600;
+    margin:0 15px;
+    transition:0.3s;
+}
 
-        h2 {
-            color: #800020;
-        }
+nav a:hover{
+    opacity:0.7;
+}
 
-        .tagline {
-            color: #555;
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-top: 15px;
-        }
+/* Sections */
 
-        .skills li {
-            margin-bottom: 10px;
-        }
+section{
+    max-width:900px;
+    margin:auto;
+    padding:70px 20px;
+}
 
-        .links a {
-            display: block;
-            margin: 10px 0;
-            color: #800020;
-            text-decoration: none;
-        }
+/* Hero */
 
-        .links a:hover {
-            text-decoration: underline;
-        }
+.hero{
+    text-align:center;
+    min-height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    animation:fadeIn 1s ease;
+}
 
-        .about-info p {
-            margin: 10px 0;
-        }
+.profile-image{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+    margin-bottom:20px;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            border-top: 1px solid #ddd;
-        }
+.hero h1{
+    font-size:3rem;
+    margin-bottom:5px;
+}
 
-        @media (max-width: 768px) {
+.hero h3{
+    font-weight:500;
+    margin-bottom:10px;
+}
 
-            h1 {
-                font-size: 3rem;
-            }
+.course{
+    margin-bottom:15px;
+    font-weight:600;
+}
 
-            .profile-image {
-                width: 180px;
-                height: 180px;
-            }
+.tagline{
+    color:#f0f0f0;
+    font-size:1rem;
+}
 
-            nav a {
-                margin: 0 10px;
-            }
+/* Cards */
 
-            .tagline {
-                font-size: 1rem;
-            }
-        }
-    </style>
+.card{
+    background:white;
+    color:#600000;
+    padding:25px;
+    border-radius:20px;
+    margin-top:20px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+/* Skills */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#600000;
+    color:white;
+    padding:10px 16px;
+    border-radius:20px;
+    font-size:0.9rem;
+}
+
+/* Links */
+
+.link-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.link-buttons a{
+    text-decoration:none;
+    background:#600000;
+    color:white;
+    padding:10px 16px;
+    border-radius:20px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.link-buttons a:hover{
+    opacity:0.85;
+}
+
+/* Contact */
+
+.contact-item{
+    margin-bottom:12px;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:30px;
+}
+
+/* Animation */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:2.2rem;
+    }
+
+    .profile-image{
+        width:150px;
+        height:150px;
+    }
+
+    nav a{
+        margin:0 8px;
+    }
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-    <section id="home" class="hero">
+<section id="home" class="hero">
 
-        <img src="profile.png"
-             alt="Profile picture of Amirrul Mukminin"
-             class="profile-image">
+    <img src="profile.png"
+         alt="Profile picture of Amirrul Mukminin"
+         class="profile-image">
 
-        <h1>miyo.</h1>
+    <h1>@miyonotmeor</h1>
 
-        <h2>Muhammad Amirrul Mukminin Bin Reduaan</h2>
+    <h3>Amirrul Mukminin</h3>
 
-        <p>
-            <strong>
-                Computer Science (Multimedia Computing) Student
-            </strong>
-        </p>
+    <div class="course">
+        Computer Science (Multimedia Computing) Student
+    </div>
 
-        <p class="tagline">
-            Web Design • Canva Design • Programming • Freelancing
-        </p>
+    <div class="tagline">
+        Web Design • Canva Design • Programming • Freelancing
+    </div>
 
-    </section>
+</section>
 
-    <section>
+<section>
+
+    <div class="card">
 
         <h2>Skills</h2>
 
-        <ul class="skills">
-            <li>Canva Pro</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript (Learning)</li>
-            <li>GitHub</li>
-            <li>Data Entry</li>
-            <li>Graphic Design</li>
-            <li>Freelancing</li>
-        </ul>
+        <div class="skills">
 
-    </section>
+            <div class="skill">Canva Pro</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript (Learning)</div>
+            <div class="skill">GitHub</div>
+            <div class="skill">Data Entry</div>
+            <div class="skill">Graphic Design</div>
+            <div class="skill">Freelancing</div>
 
-    <section>
+        </div>
+
+    </div>
+
+</section>
+
+<section>
+
+    <div class="card">
 
         <h2>Useful Links</h2>
 
-        <div class="links">
+        <div class="link-buttons">
 
             <a href="https://github.com/miyonotmeor" target="_blank">
-                GitHub Profile
+                GitHub
             </a>
 
             <a href="https://miyonotmeor.github.io/my-social-media-links/" target="_blank">
-                Social Media Links Website
+                Social Links
             </a>
 
             <a href="https://miyonotmeor.github.io/my-portfolio/" target="_blank">
-                Portfolio Website
+                Portfolio
             </a>
 
         </div>
 
-    </section>
+    </div>
 
-    <section id="about">
+</section>
+
+<section id="about">
+
+    <div class="card">
 
         <h2>About Me</h2>
 
-        <div class="about-info">
-
-            <p><strong>Name:</strong> Amirrul Mukminin</p>
-
-            <p><strong>Age:</strong> 23</p>
-
-            <p><strong>Location:</strong> Terengganu, Malaysia</p>
-
-            <p><strong>Course:</strong> Computer Science (Multimedia Computing)</p>
-
-            <p><strong>Interests:</strong> Web Design, Programming, Graphic Design, Freelancing</p>
-
+        <div class="contact-item">
+            <strong>Name:</strong> Amirrul Mukminin
         </div>
 
-    </section>
+        <div class="contact-item">
+            <strong>Age:</strong> 23
+        </div>
 
-    <section id="contact">
+        <div class="contact-item">
+            <strong>Location:</strong> Terengganu, Malaysia
+        </div>
+
+        <div class="contact-item">
+            <strong>Course:</strong> Computer Science (Multimedia Computing)
+        </div>
+
+        <div class="contact-item">
+            <strong>Interests:</strong> Web Design, Canva Design, Programming, Freelancing
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <div class="card">
 
         <h2>Contact Me</h2>
 
-        <p>Email: amirrul.mukminin1980@gmail.com</p>
+        <div class="contact-item">
+            <strong>Email:</strong> your-email@example.com
+        </div>
 
-        <p>
-            GitHub:
+        <div class="contact-item">
+            <strong>GitHub:</strong>
             <a href="https://github.com/miyonotmeor" target="_blank">
-                View GitHub Profile
+                github.com/miyonotmeor
             </a>
-        </p>
+        </div>
 
-        <p>
-            Portfolio:
+        <div class="contact-item">
+            <strong>Portfolio:</strong>
             <a href="https://miyonotmeor.github.io/my-portfolio/" target="_blank">
                 View Portfolio
             </a>
-        </p>
+        </div>
 
-    </section>
+    </div>
 
-    <footer>
-        <p>© 2026 MIYO | Interactive Personal Portfolio</p>
-    </footer>
+</section>
+
+<footer>
+    © 2026 @miyonotmeor
+</footer>
 
 </body>
 </html>
