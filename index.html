@@ -10,7 +10,7 @@
 
 <style>
 
-{
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -26,7 +26,7 @@ body{
     color:white;
 }
 
-/ Navigation /
+/* Navigation */
 
 nav{
     position:sticky;
@@ -44,21 +44,22 @@ nav a{
     font-weight:600;
     margin:0 15px;
     transition:0.3s;
+    font-size:1.1rem;
 }
 
 nav a:hover{
     opacity:0.7;
 }
 
-/ Sections /
+/* Sections */
 
 section{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
-    padding:30px 20px;
+    padding:20px;
 }
 
-/ Hero /
+/* Hero */
 
 .hero{
     text-align:center;
@@ -80,68 +81,80 @@ section{
 }
 
 .hero h1{
-    font-size:3rem;
-    margin-bottom:5px;
+    font-size:4rem;
+    margin-bottom:10px;
 }
 
 .hero h3{
-    font-weight:500;
+    font-size:1.8rem;
+    font-weight:600;
     margin-bottom:10px;
 }
 
 .course{
-    margin-bottom:15px;
+    font-size:1.2rem;
     font-weight:600;
+    margin-bottom:15px;
 }
 
 .tagline{
-    color:#f0f0f0;
-    font-size:1rem;
+    font-size:1.1rem;
+    color:#f5f5f5;
 }
 
-/ Cards /
+/* Cards */
 
 .card{
     background:white;
     color:#600000;
-    padding:25px;
-    border-radius:20px;
+    padding:30px;
+    border-radius:25px;
+    margin-bottom:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.15);
 }
 
 .card h2{
-    margin-bottom:15px;
+    margin-bottom:20px;
+    font-size:2rem;
 }
 
-/ Skills /
+/* About */
+
+.contact-item{
+    margin-bottom:15px;
+    font-size:1.1rem;
+}
+
+/* Skills */
 
 .skills{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
 }
 
 .skill{
     background:#600000;
     color:white;
-    padding:10px 16px;
-    border-radius:20px;
-    font-size:0.9rem;
+    padding:10px 18px;
+    border-radius:25px;
+    font-size:0.95rem;
 }
 
-/ Links /
+/* Links */
 
 .link-buttons{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
 }
 
 .link-buttons a{
-    text-decoration:none;
     background:#600000;
     color:white;
-    padding:10px 16px;
-    border-radius:20px;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:25px;
     font-weight:600;
     transition:0.3s;
 }
@@ -150,20 +163,21 @@ section{
     opacity:0.85;
 }
 
-/ Contact /
+/* Contact Links */
 
-.contact-item{
-    margin-bottom:12px;
+.card a{
+    color:#5e2ca5;
 }
 
-/ Footer /
+/* Footer */
 
 footer{
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
+    font-size:1.1rem;
 }
 
-/ Animation /
+/* Animation */
 
 @keyframes fadeIn{
     from{
@@ -176,12 +190,20 @@ footer{
     }
 }
 
-/ Mobile */
+/* Mobile */
 
 @media(max-width:768px){
 
+    .hero{
+        min-height:75vh;
+    }
+
     .hero h1{
-        font-size:2.2rem;
+        font-size:2.8rem;
+    }
+
+    .hero h3{
+        font-size:1.5rem;
     }
 
     .profile-image{
@@ -189,8 +211,13 @@ footer{
         height:150px;
     }
 
+    .card{
+        padding:25px;
+    }
+
     nav a{
         margin:0 8px;
+        font-size:1rem;
     }
 
 }
@@ -325,7 +352,7 @@ footer{
         <div class="contact-item">
             <strong>Portfolio:</strong>
             <a href="https://miyonotmeor.github.io/my-portfolio/" target="_blank">
-                View Portfolio
+                View Amirrul's Example Of Work
             </a>
         </div>
 
