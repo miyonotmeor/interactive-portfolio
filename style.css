@@ -287,6 +287,10 @@ footer{
     min-height:250px;
 }
 
+.about-page #about{
+    margin-top:80px;
+}
+
 /* Mobile */
 
 @media(max-width:768px){
