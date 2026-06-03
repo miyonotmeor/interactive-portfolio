@@ -413,6 +413,16 @@ footer{
     margin-top:20px;
 }
 
+/* Portfolio Page Only */
+
+.portfolio-page .container{
+    padding-top:0;
+}
+
+.portfolio-page #projects{
+    margin-top:20px;
+}
+
 /* Mobile */
 
 @media(max-width:768px){
