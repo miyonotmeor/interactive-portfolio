@@ -331,7 +331,9 @@ footer{
 @media(min-width:768px) and (max-width:1023px){
 
     .hero{
-        min-height:90vh;
+        min-height:auto !important;
+        padding-top:20px !important;
+        padding-bottom:20px !important;
     }
 }
 
@@ -340,10 +342,11 @@ footer{
 @media(min-width:1024px) and (max-width:1366px){
 
     .hero{
-        min-height:90vh;
+        min-height:auto !important;
+        padding-top:20px !important;
+        padding-bottom:20px !important;
     }
 }
-
 /* Desktop / MacBook */
 
 @media(min-width:1201px){
