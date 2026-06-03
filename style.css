@@ -277,6 +277,16 @@ footer{
     }
 }
 
+/* About Page Only */
+
+.about-page .container{
+    padding-top:0;
+}
+
+.about-page .card{
+    min-height:250px;
+}
+
 /* Mobile */
 
 @media(max-width:768px){
