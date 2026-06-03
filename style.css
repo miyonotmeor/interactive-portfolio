@@ -226,6 +226,14 @@ textarea{
     font-family:'Poppins',sans-serif;
 }
 
+input:focus,
+textarea:focus{
+    outline:none;
+    border:2px solid #600000;
+    box-shadow:0 0 8px rgba(96,0,0,0.3);
+    transition:0.3s;
+}
+
 .radio-group{
     display:flex;
     flex-wrap:wrap;
