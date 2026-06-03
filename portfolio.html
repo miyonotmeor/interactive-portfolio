@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | Amirrul Mukminin</title>
+
+<link rel="icon" type="image/png" href="First Logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="#projects">Portfolio</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- Portfolio Introduction -->
+
+    <div id="projects" class="card">
+
+        <h2>My Portfolio</h2>
+
+        <p>
+            Welcome to my portfolio showcase. Below are some of my projects,
+            websites, creative works, and professional profiles.
+        </p>
+
+    </div>
+
+    <!-- Project 1 -->
+
+    <div class="card">
+
+        <h2>Interactive Portfolio Website</h2>
+
+        <p>
+            A responsive personal portfolio website built using HTML, CSS,
+            and JavaScript with light mode, dark mode, smooth scrolling,
+            responsive layouts, and interactive navigation.
+        </p>
+
+        <div class="link-buttons">
+
+            <a href="index.html">
+                View Project
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Project 2 -->
+
+    <div class="card">
+
+        <h2>Social Media Links Website</h2>
+
+        <p>
+            A centralized website containing my social media profiles and
+            important online links for easy access.
+        </p>
+
+        <div class="link-buttons">
+
+            <a href="https://miyonotmeor.github.io/my-social-media-links/"
+               target="_blank">
+                Visit Website
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Project 3 -->
+
+    <div class="card">
+
+        <h2>GitHub Profile</h2>
+
+        <p>
+            My GitHub profile containing personal projects, university
+            assignments, web development work, and programming practice.
+        </p>
+
+        <div class="link-buttons">
+
+            <a href="https://github.com/miyonotmeor"
+               target="_blank">
+                View GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Project 4 -->
+
+    <div class="card">
+
+        <h2>Canva Design Portfolio</h2>
+
+        <p>
+            Design projects created using Canva Pro including social media
+            graphics, marketing materials, digital products, and branding
+            concepts.
+        </p>
+
+        <div class="link-buttons">
+
+            <a href="https://miyonotmeor.github.io/my-portfolio/"
+               target="_blank">
+                View Portfolio
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Contact -->
+
+    <div id="contact" class="card">
+
+        <h2>Contact Me</h2>
+
+        <div class="contact-item">
+            <strong>Email:</strong>
+            amirrul.mukminin1980@gmail.com
+        </div>
+
+        <div class="contact-item">
+            <strong>GitHub:</strong>
+
+            <a href="https://github.com/miyonotmeor"
+               target="_blank">
+                View Amirrul's GitHub Profile
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <strong>Portfolio:</strong>
+
+            <a href="https://miyonotmeor.github.io/my-portfolio/"
+               target="_blank">
+                View Amirrul's Example Of Work
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 @miyonotmeor
+</footer>
+
+<button id="theme-toggle">
+    🌙
+</button>
+
+<script>
+const themeToggle = document.getElementById("theme-toggle");
+
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-theme");
+    themeToggle.textContent = "☀️";
+}
+
+themeToggle.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark-theme");
+
+    if(document.body.classList.contains("dark-theme")){
+        localStorage.setItem("theme","dark");
+        themeToggle.textContent = "☀️";
+    }else{
+        localStorage.setItem("theme","light");
+        themeToggle.textContent = "🌙";
+    }
+
+});
+</script>
+
+</body>
+</html>
