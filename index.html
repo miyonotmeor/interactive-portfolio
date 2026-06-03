@@ -19,6 +19,11 @@
 html{
     scroll-behavior:smooth;
 }
+
+html,
+body{
+    overflow-anchor:none;
+}
     
 #home{
 
@@ -243,7 +248,7 @@ footer{
     @media(min-width:769px) and (max-width:1200px){
 
     .hero{
-        min-height:85vh;
+        min-height:100vh;
     }
 
 }
@@ -401,17 +406,21 @@ footer{
 </footer>
 
 <script>
-window.onload = function() {
+history.scrollRestoration = "manual";
+
+window.addEventListener("load", function () {
+
     if (window.location.hash) {
-        history.replaceState(null, null, ' ');
+        history.replaceState(null, null, window.location.pathname);
     }
 
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'instant'
-    });
-};
+    window.scrollTo(0, 0);
+
+});
+
+window.addEventListener("pageshow", function () {
+    window.scrollTo(0, 0);
+});
 </script>
     
 </body>
