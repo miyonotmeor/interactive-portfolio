@@ -31,7 +31,6 @@ body{
     color:white;
 }
 
-/* Dark Mode */
 /* Dark Theme */
 
 body.dark-theme{
@@ -40,43 +39,70 @@ body.dark-theme{
 }
 
 body.dark-theme nav{
-    background:rgba(59,130,246,0.15);
+    background:rgba(59,130,246,0.20);
 }
 
 body.dark-theme .card{
-    background:#1e293b;
-    color:white;
+    background:white;
+    color:#1e293b;
+}
+
+body.dark-theme .card h2{
+    color:#1e293b;
+}
+
+body.dark-theme .contact-item{
+    color:#1e293b;
+}
+
+body.dark-theme p{
+    color:#1e293b;
 }
 
 body.dark-theme .skill{
-    background:#334155;
+    background:#1e3a8a;
+    color:white;
 }
 
 body.dark-theme .link-buttons a{
-    background:#334155;
+    background:#1e3a8a;
+    color:white;
+}
+
+body.dark-theme .link-buttons a:visited,
+body.dark-theme .link-buttons a:link{
+    color:white;
 }
 
 body.dark-theme th{
-    background:#334155;
+    background:#1e3a8a;
+    color:white;
 }
 
 body.dark-theme td{
-    background:#1e293b;
-    color:white;
+    background:white;
+    color:#1e293b;
 }
 
 body.dark-theme input,
 body.dark-theme textarea{
-    background:#334155;
-    color:white;
-    border:1px solid #475569;
+    background:white;
+    color:#1e293b;
+    border:1px solid #ccc;
+}
+
+body.dark-theme label{
+    color:#1e293b;
 }
 
 body.dark-theme #theme-toggle{
-    background:#1e293b;
+    background:#1e3a8a;
     color:white;
 }
 
+body.dark-theme .card a{
+    color:#2563eb;
+}
 /* Navigation */
 
 nav{
