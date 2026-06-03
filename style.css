@@ -125,6 +125,8 @@ section{
     margin-bottom:25px;
     box-shadow:0 8px 25px rgba(0,0,0,0.15);
     animation:fadeIn 0.8s ease;
+
+    min-height:240px;
 }
 
 .card h2{
