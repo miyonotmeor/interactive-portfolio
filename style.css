@@ -331,9 +331,7 @@ footer{
 @media(min-width:768px) and (max-width:1023px){
 
     .hero{
-        min-height:auto;
-        padding-top:0;
-        padding-bottom:30px;
+        min-height:90vh;
     }
 }
 
@@ -342,9 +340,7 @@ footer{
 @media(min-width:1024px) and (max-width:1366px){
 
     .hero{
-        min-height:auto;
-        padding-top:0;
-        padding-bottom:30px;
+        min-height:90vh;
     }
 }
 
