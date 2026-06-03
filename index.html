@@ -74,7 +74,7 @@ section{
 
 .hero{
     text-align:center;
-    min-height:90vh;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -217,16 +217,16 @@ footer{
     }
 
     .hero h1{
-        font-size:2.8rem;
+        font-size:2.2rem;
     }
 
     .hero h3{
-        font-size:1.5rem;
+        font-size:1.3rem;
     }
 
     .profile-image{
-        width:150px;
-        height:150px;
+        width:130px;
+        height:130px;
     }
 
     .card{
@@ -382,5 +382,19 @@ footer{
     © 2026 @miyonotmeor
 </footer>
 
+<script>
+window.onload = function() {
+    if (window.location.hash) {
+        history.replaceState(null, null, ' ');
+    }
+
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant'
+    });
+};
+</script>
+    
 </body>
 </html>
