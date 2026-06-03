@@ -12,16 +12,17 @@ html,
 body{
     overflow-anchor:none;
 }
-    
+
 #home{
-
     scroll-margin-top:0;
-
 }
 
-#about,
+#about{
+    scroll-margin-top:100px;
+}
+
 #contact{
-    scroll-margin-top: 100px;
+    scroll-margin-top:90px;
 }
 
 body{
@@ -53,6 +54,14 @@ nav a{
 
 nav a:hover{
     opacity:0.7;
+}
+
+/* Layout */
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:30px 20px;
 }
 
 /* Sections */
@@ -113,8 +122,9 @@ section{
     color:#600000;
     padding:30px;
     border-radius:25px;
-    margin-bottom:20px;
+    margin-bottom:25px;
     box-shadow:0 8px 25px rgba(0,0,0,0.15);
+    animation:fadeIn 0.8s ease;
 }
 
 .card h2{
@@ -162,10 +172,8 @@ section{
     font-weight:600;
     transition:0.3s;
 }
-.link-buttons a:visited{
-    color:white;
-}
 
+.link-buttons a:visited,
 .link-buttons a:link{
     color:white;
 }
@@ -180,12 +188,78 @@ section{
     color:#5e2ca5;
 }
 
+/* Tables */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,
+td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#600000;
+    color:white;
+}
+
+/* Forms */
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+input,
+textarea{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-family:'Poppins',sans-serif;
+}
+
+.radio-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.button-group{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+button,
+input[type="reset"]{
+    background:#600000;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:600;
+    transition:0.3s;
+}
+
+button:hover,
+input[type="reset"]:hover{
+    opacity:0.85;
+}
+
 /* Footer */
 
 footer{
     text-align:center;
     padding:40px 20px;
     font-size:1.1rem;
+    color:white;
 }
 
 /* Animation */
@@ -226,27 +300,30 @@ footer{
         padding:25px;
     }
 
+    .card h2{
+        font-size:1.7rem;
+    }
+
     nav a{
         margin:0 8px;
         font-size:1rem;
     }
 }
 
-    /* iPad */
-    @media(min-width:769px) and (max-width:1200px){
+/* iPad */
+
+@media(min-width:769px) and (max-width:1200px){
 
     .hero{
         min-height:90vh;
     }
-
 }
 
-    /* Desktop / MacBook */
+/* Desktop / MacBook */
 
 @media(min-width:1201px){
 
     .hero{
         min-height:90vh;
     }
-
 }
