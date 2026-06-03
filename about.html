@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Me | Amirrul Mukminin</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+}
+
+h1,h2{
+    margin-bottom:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:30px;
+}
+
+th,td{
+    border:1px solid #ccc;
+    padding:12px;
+    text-align:left;
+}
+
+th{
+    background:#f2f2f2;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+input,
+textarea{
+    padding:10px;
+}
+
+.button-group{
+    display:flex;
+    gap:10px;
+}
+
+button,
+input[type="reset"]{
+    padding:10px;
+    cursor:pointer;
+}
+
+a{
+    text-decoration:none;
+}
+
+</style>
+</head>
+<body>
+
+<h1>About Me</h1>
+
+<p>
+My name is Amirrul Mukminin. I am currently studying
+Computer Science (Multimedia Computing) and I am interested
+in web design, programming, Canva design and freelancing.
+</p>
+
+<h2>Education & Skills Table</h2>
+
+<table>
+
+<tr>
+<th>Category</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Education</td>
+<td>Bachelor of Computer Science (Multimedia Computing)</td>
+</tr>
+
+<tr>
+<td>Skills</td>
+<td>HTML, CSS, Canva Pro, GitHub</td>
+</tr>
+
+<tr>
+<td>Experience</td>
+<td>Freelancing, Data Entry, Graphic Design</td>
+</tr>
+
+</table>
+
+<h2>Contact Form</h2>
+
+<form>
+
+<label>Name</label>
+<input type="text" required>
+
+<label>Email</label>
+<input type="email" required>
+
+<label>Inquiry Type</label>
+
+<div>
+<input type="radio" name="inquiry">
+Freelancing
+
+<input type="radio" name="inquiry">
+Collaboration
+
+<input type="radio" name="inquiry">
+General Question
+</div>
+
+<label>Message</label>
+<textarea rows="5" required></textarea>
+
+<div class="button-group">
+<button type="submit">Submit</button>
+<input type="reset" value="Reset">
+</div>
+
+</form>
+
+<br>
+
+<a href="index.html">← Back To Home</a>
+
+</body>
+</html>
