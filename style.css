@@ -103,6 +103,13 @@ body.dark-theme #theme-toggle{
 body.dark-theme .card a{
     color:#2563eb;
 }
+
+body.dark-theme button,
+body.dark-theme input[type="reset"]{
+    background:#1e3a8a;
+    color:white;
+    border:none;
+}
 /* Navigation */
 
 nav{
