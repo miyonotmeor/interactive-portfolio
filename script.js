@@ -76,7 +76,7 @@ if (greetingElement) {
 }
 
 // ==========================================
-// GREETING FADE WHEN PROFILE IMAGE DISAPPEARS
+// GREETING FADE WITH PROFILE IMAGE
 // ==========================================
 
 const greetingBox =
@@ -92,7 +92,7 @@ if(greetingBox && profileImage){
         const rect =
             profileImage.getBoundingClientRect();
 
-        if(rect.bottom < 0){
+        if(rect.bottom < window.innerHeight * 0.25){
 
             greetingBox.classList.add(
                 "greeting-hidden"
