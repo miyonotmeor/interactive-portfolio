@@ -551,8 +551,9 @@ body.dark-theme .project-thumbnail span{
 /* Floating Greeting */
 
 #greeting-box{
+    visibility:hidden;
+    
     position:fixed;
-
     left:35px;
     bottom:35px;
 
