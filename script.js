@@ -75,6 +75,48 @@ if (greetingElement) {
 
 }
 
+// ==========================================
+// GREETING FADE WHEN PROFILE IMAGE DISAPPEARS
+// ==========================================
+
+const greetingBox =
+    document.getElementById("greeting-box");
+
+const profileImage =
+    document.querySelector(".profile-image");
+
+if(greetingBox && profileImage){
+
+    function checkGreetingVisibility(){
+
+        const rect =
+            profileImage.getBoundingClientRect();
+
+        if(rect.bottom < 0){
+
+            greetingBox.classList.add(
+                "greeting-hidden"
+            );
+
+        }else{
+
+            greetingBox.classList.remove(
+                "greeting-hidden"
+            );
+
+        }
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        checkGreetingVisibility
+    );
+
+    checkGreetingVisibility();
+
+}
+
 
 // ==========================================
 // CURRENT DATE & TIME
