@@ -85,17 +85,17 @@ if (greetingElement && greetingBox) {
 // GREETING FADE WITH HERO SECTION
 // ==========================================
 
-const heroSection =
-    document.querySelector(".hero");
+const profileImage =
+    document.querySelector(".profile-image");
 
-if(greetingBox && heroSection){
+if(greetingBox && profileImage){
 
     function checkGreetingVisibility(){
 
         const rect =
-            heroSection.getBoundingClientRect();
+    profileImage.getBoundingClientRect();
 
-        if(rect.bottom < 150){
+        if(rect.bottom < 0){
 
             greetingBox.classList.add(
                 "greeting-hidden"
