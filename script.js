@@ -53,9 +53,13 @@ window.addEventListener("pageshow", function () {
 // PERSONALIZED GREETING
 // ==========================================
 
-const greetingElement = document.getElementById("greeting");
+const greetingElement =
+    document.getElementById("greeting");
 
-if (greetingElement) {
+const greetingBox =
+    document.getElementById("greeting-box");
+
+if (greetingElement && greetingBox) {
 
     const hour = new Date().getHours();
 
@@ -80,9 +84,6 @@ if (greetingElement) {
 // ==========================================
 // GREETING FADE WITH HERO SECTION
 // ==========================================
-
-const greetingBox =
-    document.getElementById("greeting-box");
 
 const heroSection =
     document.querySelector(".hero");
