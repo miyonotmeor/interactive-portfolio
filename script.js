@@ -55,9 +55,14 @@ window.addEventListener("pageshow", function () {
 
 const greetingElement = document.getElementById("greeting");
 
+const greetingBox =
+    document.getElementById("greeting-box");
+
 if (greetingElement) {
 
     const hour = new Date().getHours();
+
+    greetingBox.style.visibility = "visible";
 
     let greeting = "";
 
@@ -83,16 +88,16 @@ const greetingBox =
     document.getElementById("greeting-box");
 
 const profileImage =
-    document.querySelector(".profile-image");
+    document.querySelector(".hero");
 
 if(greetingBox && profileImage){
 
     function checkGreetingVisibility(){
 
         const rect =
-            profileImage.getBoundingClientRect();
+            heroSection.getBoundingClientRect();
 
-        if(rect.bottom < window.innerHeight * 0.25){
+        if(rect.bottom < 250){
 
             greetingBox.classList.add(
                 "greeting-hidden"
