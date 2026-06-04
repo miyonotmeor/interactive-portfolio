@@ -55,9 +55,6 @@ window.addEventListener("pageshow", function () {
 
 const greetingElement = document.getElementById("greeting");
 
-const greetingBox =
-    document.getElementById("greeting-box");
-
 if (greetingElement) {
 
     const hour = new Date().getHours();
@@ -81,23 +78,23 @@ if (greetingElement) {
 }
 
 // ==========================================
-// GREETING FADE WITH PROFILE IMAGE
+// GREETING FADE WITH HERO SECTION
 // ==========================================
 
 const greetingBox =
     document.getElementById("greeting-box");
 
-const profileImage =
+const heroSection =
     document.querySelector(".hero");
 
-if(greetingBox && profileImage){
+if(greetingBox && heroSection){
 
     function checkGreetingVisibility(){
 
         const rect =
             heroSection.getBoundingClientRect();
 
-        if(rect.bottom < 250){
+        if(rect.bottom < 150){
 
             greetingBox.classList.add(
                 "greeting-hidden"
@@ -121,7 +118,6 @@ if(greetingBox && profileImage){
     checkGreetingVisibility();
 
 }
-
 
 // ==========================================
 // CURRENT DATE & TIME
