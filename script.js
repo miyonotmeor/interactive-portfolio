@@ -228,7 +228,7 @@ if(resetButton){
                 if(messageCounter){
 
                     messageCounter.textContent =
-                        "500 characters remaining";
+                        "";
 
                     messageCounter.style.color =
                         "#666";
