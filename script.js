@@ -217,3 +217,42 @@ if(liveEmail && emailError){
     });
 
 }
+
+// ==========================================
+// LIVE NAME VALIDATION
+// ==========================================
+
+const liveName =
+    document.getElementById("name");
+
+const nameError =
+    document.getElementById("name-error");
+
+if(liveName && nameError){
+
+    liveName.addEventListener("input", () => {
+
+        const namePattern =
+            /^[A-Za-z\s]+$/;
+
+        if(
+            liveName.value === ""
+        ){
+            nameError.textContent = "";
+        }
+        else if(
+            !namePattern.test(
+                liveName.value
+            )
+        ){
+            nameError.textContent =
+                "Name must contain letters only";
+        }
+        else{
+            nameError.textContent =
+                "";
+        }
+
+    });
+
+}
