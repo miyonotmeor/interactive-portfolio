@@ -637,3 +637,17 @@ body.dark-theme #greeting{
     }
 
 }
+
+/* Hide Greeting & Date Time on Mobile and iPad Portrait */
+
+@media (max-width:1023px){
+
+    #nav-greeting{
+        display:none;
+    }
+
+    #datetime{
+        display:none;
+    }
+
+}
