@@ -460,6 +460,11 @@ footer{
     margin-top:20px;
 }
 
+.about-page #nav-greeting,
+.portfolio-page #nav-greeting{
+    top:25px;
+}
+
 /* Mobile */
 
 @media(max-width:768px){
