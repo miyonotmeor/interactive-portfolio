@@ -178,3 +178,42 @@ if(
     });
 
 }
+
+// ==========================================
+// LIVE EMAIL VALIDATION
+// ==========================================
+
+const liveEmail =
+    document.getElementById("email");
+
+const emailError =
+    document.getElementById("email-error");
+
+if(liveEmail && emailError){
+
+    liveEmail.addEventListener("input", () => {
+
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if(
+            liveEmail.value === ""
+        ){
+            emailError.textContent = "";
+        }
+        else if(
+            !emailPattern.test(
+                liveEmail.value
+            )
+        ){
+            emailError.textContent =
+                "Invalid email address";
+        }
+        else{
+            emailError.textContent =
+                "";
+        }
+
+    });
+
+}
