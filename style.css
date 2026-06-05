@@ -292,6 +292,13 @@ section{
     font-size:1.1rem;
 }
 
+#character-count{
+    margin-top:5px;
+    font-size:0.9rem;
+    font-weight:600;
+    color:white;
+}
+
 /* Skills */
 
 .skills{
