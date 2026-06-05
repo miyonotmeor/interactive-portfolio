@@ -28,13 +28,16 @@ if (themeToggle) {
 }
 
 // ==========================================
-// NAVIGATION GREETING
+// NAVIGATION GREETING (HOME PAGE ONLY)
 // ==========================================
 
 const navGreeting =
     document.getElementById("nav-greeting");
 
-if(navGreeting){
+if (
+    navGreeting &&
+    window.location.pathname.includes("index.html")
+) {
 
     const hour = new Date().getHours();
 
