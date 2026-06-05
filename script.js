@@ -256,3 +256,30 @@ if(liveName && nameError){
     });
 
 }
+
+// ==========================================
+// CHARACTER COUNTER
+// ==========================================
+
+const messageBox =
+    document.getElementById("message");
+
+const characterCount =
+    document.getElementById(
+        "character-count"
+    );
+
+if(messageBox && characterCount){
+
+    messageBox.addEventListener(
+        "input",
+        () => {
+
+            characterCount.textContent =
+                messageBox.value.length +
+                " / 500 characters";
+
+        }
+    );
+
+}
