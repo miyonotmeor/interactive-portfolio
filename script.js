@@ -180,6 +180,68 @@ if(
 }
 
 // ==========================================
+// RESET FORM VALIDATION MESSAGES
+// ==========================================
+
+const resetButton =
+    document.querySelector(
+        'input[type="reset"]'
+    );
+
+if(resetButton){
+
+    resetButton.addEventListener(
+        "click",
+        function(){
+
+            setTimeout(() => {
+
+                // Name validation
+
+                const nameError =
+                    document.getElementById(
+                        "name-error"
+                    );
+
+                if(nameError){
+                    nameError.textContent = "";
+                }
+
+                // Email validation
+
+                const emailError =
+                    document.getElementById(
+                        "email-error"
+                    );
+
+                if(emailError){
+                    emailError.textContent = "";
+                }
+
+                // Character counter
+
+                const messageCounter =
+                    document.getElementById(
+                        "message-counter"
+                    );
+
+                if(messageCounter){
+
+                    messageCounter.textContent =
+                        "500 characters remaining";
+
+                    messageCounter.style.color =
+                        "#666";
+                }
+
+            },10);
+
+        }
+    );
+
+}
+
+// ==========================================
 // LIVE EMAIL VALIDATION
 // ==========================================
 
