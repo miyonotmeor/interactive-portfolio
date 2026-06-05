@@ -141,20 +141,40 @@ if (contactForm) {
         const messageInput =
             contactForm.querySelector("textarea");
 
+        const emailPattern =
+            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (
-            !nameInput.value.trim() ||
-            !emailInput.value.trim() ||
-            !messageInput.value.trim()
-        ) {
+    !nameInput.value.trim() ||
+    !emailInput.value.trim() ||
+    !messageInput.value.trim()
+) {
 
-            event.preventDefault();
+    event.preventDefault();
 
-            alert(
-                "Please complete all required fields before submitting."
-            );
+    alert(
+        "Please complete all required fields before submitting."
+    );
 
-        }
+    return;
+}
 
+if(
+    !emailPattern.test(emailInput.value)
+){
+
+    event.preventDefault();
+
+    alert(
+        "Please enter a valid email address."
+    );
+
+    return;
+}
+
+        alert(
+    "Form submitted successfully!"
+);
     });
 
 }
