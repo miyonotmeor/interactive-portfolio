@@ -83,22 +83,38 @@ window.addEventListener("pageshow", function () {
 // CURRENT DATE & TIME
 // ==========================================
 
-const dateTimeElement = document.getElementById("datetime");
+const dateTimeElement =
+    document.getElementById("datetime");
 
-if (dateTimeElement) {
+if(dateTimeElement){
 
-    function updateDateTime() {
+    function updateDateTime(){
 
         const now = new Date();
 
+        const options = {
+            weekday: "short",
+            month: "short",
+            day: "numeric",
+            hour: "numeric",
+            minute: "2-digit",
+            hour12: true
+        };
+
         dateTimeElement.textContent =
-            now.toLocaleString();
+            now.toLocaleString(
+                "en-US",
+                options
+            );
 
     }
 
     updateDateTime();
 
-    setInterval(updateDateTime, 1000);
+    setInterval(
+        updateDateTime,
+        1000
+    );
 
 }
 
