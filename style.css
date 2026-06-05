@@ -353,16 +353,32 @@ section{
 #careerSelect{
     width:100%;
     padding:12px;
-    border-radius:10px;
     border:1px solid #ccc;
+    border-radius:10px;
     font-family:'Poppins',sans-serif;
-    margin-top:10px;
+    font-size:1rem;
+    background:white;
+    color:#600000;
+}
+
+#careerSelect:focus{
+    outline:none;
+    border:2px solid #600000;
+    box-shadow:0 0 8px rgba(96,0,0,0.3);
 }
 
 #recommendationResult{
     margin-top:20px;
-    font-size:1.1rem;
     line-height:1.8;
+    font-size:1.05rem;
+}
+
+/* Dark Theme */
+
+body.dark-theme #careerSelect{
+    background:white;
+    color:#1e293b;
+    border:1px solid #ccc;
 }
 
 /* Contact Links */
