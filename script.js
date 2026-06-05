@@ -266,26 +266,61 @@ if(liveName && nameError){
 }
 
 // ==========================================
-// CHARACTER COUNTER
+// MESSAGE CHARACTER COUNTER
 // ==========================================
 
 const messageBox =
     document.getElementById("message");
 
-const characterCount =
-    document.getElementById(
-        "character-count"
-    );
+const messageCounter =
+    document.getElementById("message-counter");
 
-if(messageBox && characterCount){
+if(
+    messageBox &&
+    messageCounter
+){
 
     messageBox.addEventListener(
         "input",
         () => {
 
-            characterCount.textContent =
-                messageBox.value.length +
-                " / 500 characters";
+            const remaining =
+                500 -
+                messageBox.value.length;
+
+            if(
+                remaining > 30
+            ){
+
+                messageCounter.textContent =
+                    remaining +
+                    " characters remaining";
+
+                messageCounter.style.color =
+                    "#666";
+            }
+
+            else if(
+                remaining > 0
+            ){
+
+                messageCounter.textContent =
+                    "Warning: Only " +
+                    remaining +
+                    " characters left";
+
+                messageCounter.style.color =
+                    "orange";
+            }
+
+            else{
+
+                messageCounter.textContent =
+                    "Maximum 500 characters reached";
+
+                messageCounter.style.color =
+                    "red";
+            }
 
         }
     );
