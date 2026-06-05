@@ -27,6 +27,36 @@ if (themeToggle) {
 
 }
 
+// ==========================================
+// NAVIGATION GREETING
+// ==========================================
+
+const navGreeting =
+    document.getElementById("nav-greeting");
+
+if(navGreeting){
+
+    const hour = new Date().getHours();
+
+    let greeting = "";
+
+    if(hour < 12){
+        greeting =
+            "Good Morning,<br>Welcome to My Portfolio!";
+    }
+    else if(hour < 18){
+        greeting =
+            "Good Afternoon,<br>Welcome to My Portfolio!";
+    }
+    else{
+        greeting =
+            "Good Evening,<br>Welcome to My Portfolio!";
+    }
+
+    navGreeting.innerHTML = greeting;
+
+}
+
 
 // ==========================================
 // SCROLL TO TOP WHEN PAGE LOADS
