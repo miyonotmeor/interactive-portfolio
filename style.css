@@ -299,6 +299,12 @@ section{
     color:white;
 }
 
+#message-counter{
+    margin-top:8px;
+    font-size:0.95rem;
+    font-weight:600;
+}
+
 /* Skills */
 
 .skills{
