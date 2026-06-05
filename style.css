@@ -537,6 +537,7 @@ footer{
 .about-page #nav-greeting,
 .portfolio-page #nav-greeting{
     top:23px;
+    left:25px;
 }
 
 /* Mobile */
