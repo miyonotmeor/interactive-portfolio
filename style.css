@@ -613,20 +613,3 @@ body.dark-theme #greeting{
     }
 
 }
-
-#nav-greeting{
-    position:absolute;
-
-    top:28px;
-    left:30px;
-
-    z-index:1001;
-
-    font-family:'Poppins',sans-serif;
-    font-size:1.1rem;
-    font-weight:600;
-
-    color:white;
-
-    line-height:1.1;
-}
