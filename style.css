@@ -137,9 +137,8 @@ nav a:hover{
 
 #nav-greeting{
     position:absolute;
-
     left:35px;
-    top:22px;
+    top:25px;
     font-family:'Poppins',sans-serif;
     font-size:1.1rem;
     font-weight:600;
