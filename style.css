@@ -385,6 +385,13 @@ textarea:focus{
     transition:0.3s;
 }
 
+#email-error{
+    margin-top:5px;
+    font-size:0.9rem;
+    color:red;
+    font-weight:600;
+}
+
 .radio-group{
     display:flex;
     flex-wrap:wrap;
