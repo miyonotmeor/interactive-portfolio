@@ -328,6 +328,135 @@ if(liveName && nameError){
 }
 
 // ==========================================
+// CAREER RECOMMENDATION TOOL
+// ==========================================
+
+const recommendBtn =
+    document.getElementById(
+        "recommendBtn"
+    );
+
+const careerSelect =
+    document.getElementById(
+        "careerSelect"
+    );
+
+const recommendationResult =
+    document.getElementById(
+        "recommendationResult"
+    );
+
+if(
+    recommendBtn &&
+    careerSelect &&
+    recommendationResult
+){
+
+    recommendBtn.addEventListener(
+        "click",
+        function(){
+
+            const choice =
+                careerSelect.value;
+
+            let project = "";
+            let level = "";
+            let score = "";
+            let feedback = "";
+
+            if(choice === "web"){
+
+                project =
+                    "Responsive Portfolio Website";
+
+                level =
+                    "Intermediate";
+
+                score =
+                    "90%";
+
+                feedback =
+                    "You may enjoy my web development projects.";
+
+            }
+
+            else if(choice === "canva"){
+
+                project =
+                    "Canva Infographic Projects";
+
+                level =
+                    "Advanced";
+
+                score =
+                    "100%";
+
+                feedback =
+                    "You may enjoy my Canva design portfolio.";
+
+            }
+
+            else if(choice === "programming"){
+
+                project =
+                    "HTML, CSS & JavaScript Projects";
+
+                level =
+                    "Intermediate";
+
+                score =
+                    "95%";
+
+                feedback =
+                    "You may enjoy my programming projects.";
+
+            }
+
+            else if(choice === "data"){
+
+                project =
+                    "Netflix Dataset Data Entry Project";
+
+                level =
+                    "Intermediate";
+
+                score =
+                    "85%";
+
+                feedback =
+                    "You may enjoy my data entry work.";
+
+            }
+
+            else{
+
+                recommendationResult.innerHTML =
+                    "<span style='color:red;'>Please select an interest.</span>";
+
+                return;
+
+            }
+
+            recommendationResult.innerHTML =
+
+                "<strong>Recommended Project:</strong> "
+                + project +
+
+                "<br><strong>Skill Level:</strong> "
+                + level +
+
+                "<br><strong>Compatibility Score:</strong> "
+                + score +
+
+                "<br><strong>Feedback:</strong> "
+                + feedback;
+
+        }
+    );
+
+}
+
+// ==========================================
 // MESSAGE CHARACTER COUNTER
 // ==========================================
 
