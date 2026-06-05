@@ -328,23 +328,57 @@ if(liveName && nameError){
 }
 
 // ==========================================
-// CAREER RECOMMENDATION TOOL
+// CAREER RECOMMENDATION TOOL (LOOPS VERSION)
 // ==========================================
 
 const recommendBtn =
-    document.getElementById(
-        "recommendBtn"
-    );
+    document.getElementById("recommendBtn");
 
 const careerSelect =
-    document.getElementById(
-        "careerSelect"
-    );
+    document.getElementById("careerSelect");
 
 const recommendationResult =
-    document.getElementById(
-        "recommendationResult"
-    );
+    document.getElementById("recommendationResult");
+
+const projects = [
+
+    {
+        interest: "web",
+        project: "Responsive Portfolio Website",
+        level: "Level 2 - Intermediate",
+        score: "90%",
+        feedback:
+            "You may enjoy my web development projects."
+    },
+
+    {
+        interest: "canva",
+        project: "Canva Infographic Projects",
+        level: "Level 3 - Advanced",
+        score: "100%",
+        feedback:
+            "You may enjoy my Canva design portfolio."
+    },
+
+    {
+        interest: "programming",
+        project: "HTML, CSS & JavaScript Projects",
+        level: "Level 2 - Intermediate",
+        score: "95%",
+        feedback:
+            "You may enjoy my programming projects."
+    },
+
+    {
+        interest: "data",
+        project: "Netflix Dataset Data Entry Project",
+        level: "Level 2 - Intermediate",
+        score: "85%",
+        feedback:
+            "You may enjoy my data entry work."
+    }
+
+];
 
 if(
     recommendBtn &&
@@ -359,97 +393,46 @@ if(
             const choice =
                 careerSelect.value;
 
-            let project = "";
-            let level = "";
-            let score = "";
-            let feedback = "";
+            let found = false;
 
-            if(choice === "web"){
+            for(
+                let i = 0;
+                i < projects.length;
+                i++
+            ){
 
-                project =
-                    "Responsive Portfolio Website";
+                if(
+                    projects[i].interest === choice
+                ){
 
-                level =
-                    "Intermediate";
+                    recommendationResult.innerHTML =
 
-                score =
-                    "90%";
+                        "<strong>Recommended Project:</strong> "
+                        + projects[i].project +
 
-                feedback =
-                    "You may enjoy my web development projects.";
+                        "<br><strong>Career Level:</strong> "
+                        + projects[i].level +
 
-            }
+                        "<br><strong>Compatibility Score:</strong> "
+                        + projects[i].score +
 
-            else if(choice === "canva"){
+                        "<br><strong>Feedback:</strong> "
+                        + projects[i].feedback;
 
-                project =
-                    "Canva Infographic Projects";
+                    found = true;
 
-                level =
-                    "Advanced";
+                    break;
 
-                score =
-                    "100%";
-
-                feedback =
-                    "You may enjoy my Canva design portfolio.";
+                }
 
             }
 
-            else if(choice === "programming"){
-
-                project =
-                    "HTML, CSS & JavaScript Projects";
-
-                level =
-                    "Intermediate";
-
-                score =
-                    "95%";
-
-                feedback =
-                    "You may enjoy my programming projects.";
-
-            }
-
-            else if(choice === "data"){
-
-                project =
-                    "Netflix Dataset Data Entry Project";
-
-                level =
-                    "Intermediate";
-
-                score =
-                    "85%";
-
-                feedback =
-                    "You may enjoy my data entry work.";
-
-            }
-
-            else{
+            if(!found){
 
                 recommendationResult.innerHTML =
                     "<span style='color:red;'>Please select an interest.</span>";
 
-                return;
-
             }
-
-            recommendationResult.innerHTML =
-
-                "<strong>Recommended Project:</strong> "
-                + project +
-
-                "<br><strong>Skill Level:</strong> "
-                + level +
-
-                "<br><strong>Compatibility Score:</strong> "
-                + score +
-
-                "<br><strong>Feedback:</strong> "
-                + feedback;
 
         }
     );
