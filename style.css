@@ -337,6 +337,7 @@ section{
     border-radius:25px;
     font-weight:600;
     transition:0.3s;
+    display:inline-block;
 }
 
 .link-buttons a:visited,
@@ -345,7 +346,9 @@ section{
 }
 
 .link-buttons a:hover{
-    opacity:0.85;
+    transform:translateY(-5px) scale(1.03);
+    opacity:0.9;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
 
 /* Career Recommendation Tool */
