@@ -120,6 +120,7 @@ nav{
     backdrop-filter:blur(10px);
     padding:20px;
     text-align:center;
+    position:relative;
 }
 
 nav a{
@@ -488,8 +489,10 @@ footer{
     #datetime{
     position:absolute;
 
-    right:30px;
-    top:28px;
+    right:35px;
+    top:20px;
+
+    z-index:1001;
 
     font-family:'Poppins',sans-serif;
     font-size:1.1rem;
