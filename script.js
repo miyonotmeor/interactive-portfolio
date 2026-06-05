@@ -197,22 +197,30 @@ if(liveEmail && emailError){
             /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if(
-            liveEmail.value === ""
-        ){
-            emailError.textContent = "";
-        }
-        else if(
-            !emailPattern.test(
-                liveEmail.value
-            )
-        ){
-            emailError.textContent =
-                "Invalid email address";
-        }
-        else{
-            emailError.textContent =
-                "";
-        }
+    liveEmail.value === ""
+){
+    emailError.textContent = "";
+}
+else if(
+    !emailPattern.test(
+        liveEmail.value
+    )
+){
+    emailError.textContent =
+        "Invalid email address";
+
+    emailError.style.color =
+        "red";
+}
+else{
+
+    emailError.textContent =
+        "✓ Valid email address";
+
+    emailError.style.color =
+        "limegreen";
+
+}
 
     });
 
